@@ -1,0 +1,102 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="utf-8">
+<title>
+CC_CALLBACK && std::bind && std::placeholders - &lt;sonny&gt;
+</title>
+<link rel="stylesheet" type="text/css" href="./syntax.css">
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+
+<header><h1>&lt;sonny&gt;</h1></header>
+<div id="content">
+<section><article><h1><a>CC_CALLBACK && std::bind && std::placeholders</a></h1></article></section>
+
+<topcomment><article class="comment">
+
+
+<h2>In C++</h2>
+
+<p>1.</p>
+
+<pre><code>void add(int count) {}
+auto add_func = std::bind(add, 123);
+
+// so we can call:
+add_func(); // same as call: add(123);
+</code></pre>
+
+<p>2.</p>
+
+<pre><code>void class::add() {}
+auto add_func = std::bind(&amp;class::add, this);
+
+// so we can call
+add_func(); // same as call: class::add();
+</code></pre>
+
+<p>3.</p>
+
+<pre><code>void class::add() {}
+auto add_func = std::bind(&amp;class::add, _1);
+// auto add_func = std::bind(&amp;class::add, std::placeholders::_1);
+
+// so we can call
+class* s = ...;
+add_func(s); // same as call: class::add(s);
+</code></pre>
+
+<p>4.</p>
+
+<pre><code>void class::add(int) {}
+auto add_func = std::bind(&amp;class::add, this, _1);
+// auto add_func = std::bind(&amp;class::add, this, std::placeholders::_1);
+
+// so we can call
+add_func(123); // same as call: class::add(123);
+</code></pre>
+
+<p>5.</p>
+
+<pre><code>void add(int a, int b, int c) {}
+auto add_func = std::bind(add, 123, _1, _2);
+// auto add_func = std::bind(add, 123, std::placeholders::_1, std::placeholders::_2);
+
+// so we can call
+add_func(2, 3); // same as call: add(123, 2, 3);
+</code></pre>
+
+<p>6.</p>
+
+<pre><code>void add(int a, int b, int c) {}
+auto add_func = std::bind(add, _2, 123, _1);
+// auto add_func = std::bind(add, std::placeholders::_2, 123, std::placeholders::_1);
+
+// so we can call
+add_func(3, 1); // same as call: add(1, 123, 3);
+</code></pre>
+
+<h2>In cocos2d-x</h2>
+
+<pre><code> // new callbacks based on C++11
+
+// as case 1
+#define CC_CALLBACK_0(__selector__,__target__, ...) std::bind(&amp;__selector__,__target__, ##__VA_ARGS__)
+
+// as case 4
+#define CC_CALLBACK_1(__selector__,__target__, ...) std::bind(&amp;__selector__,__target__, std::placeholders::_1, ##__VA_ARGS__)
+
+#define CC_CALLBACK_2(__selector__,__target__, ...) std::bind(&amp;__selector__,__target__, std::placeholders::_1, std::placeholders::_2, ##__VA_ARGS__)
+
+#define CC_CALLBACK_3(__selector__,__target__, ...) std::bind(&amp;__selector__,__target__, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, ##__VA_ARGS__)
+</code></pre>
+
+<h2>References</h2>
+
+<ol>
+<li><a href="http://blog.think-async.com/2010/04/bind-illustrated.html">link1</a></li>
+<li><a href="http://thispointer.com/stdbind-tutorial-and-usage-details/">link2</a></li>
+</ol>
+
+</article></topcomment></div></body></html>
