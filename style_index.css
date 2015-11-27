@@ -1,3 +1,8 @@
+a {
+  text-decoration:none;
+  color:#666;
+}
+
 body {
   font-family: "Monaco", "Inconsolata", Courier, "Helvetica Neue", "Lucida Grande";
   text-rendering: optimizeLegibility;
@@ -6,75 +11,75 @@ body {
 }
 
 header {
-  display:block;
-  position:relative;
-  padding: 15px 0px 0px 15px;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+display:block;
+position:relative;
+padding: 15px 0px 0px 15px;
+width: 800px;
+       margin-left: auto;
+       margin-right: auto;
 }
 
 .post-title {
-  font-size:37px;
+  font-size:25px;
   line-height:1.1;
   font-weight:300;
   margin-top:-6px;
 }
 
 .post-title a {
-  color:#222;
-  text-decoration:none;
+color:#222;
+      text-decoration:none;
 }
 
 .post-title a:hover {
-  color:#465CA2;
+color:#465CA2;
 }
 
 header h1 {
-  display: inline;
-  font-size:50px;
-  font-weight:bold;
-  color:#333;
+display: inline;
+         font-size:50px;
+         font-weight:bold;
+color:#333;
 }
 
 header h1 a {
-  color:#333;
+color:#333;
 }
 
 #content {
-    display:block;
-    width: 800px;
-    margin-top:20px;
-    margin-bottom:20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-    font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode",   "Lucida Sans",Geneva,Verdana,sans-serif;
+display:block;
+width: 800px;
+       margin-top:20px;
+       margin-bottom:20px;
+       margin-left: auto;
+       margin-right: auto;
+padding: 15px;
+         font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode",   "Lucida Sans",Geneva,Verdana,sans-serif;
 }
 
 titlepage {
-  display: block;
-  font-size: 16px;
-  margin-bottom:10px;
-  border: 1px solid transparent;
+display: block;
+         font-size: 16px;
+         margin-bottom:10px;
+border: 1px solid transparent;
 }
 
 titlepage h1 {
-    display: inline;
-    font-size:25px;
+display: inline;
+         font-size:25px;
 }
 
 titlepage h1 a { 
-    color: #666;
+color: #666;
 }
 
 titlepage h1 a:visited {
-    color: #666;
+color: #666;
 }
 
 
 article, .callout .content {
-  padding:40px 0;
+padding:40px 0;
 }
 
 article + article {
@@ -82,47 +87,53 @@ article + article {
 }
 
 .callout {
-  background:#ccc;
-  margin:0 -20px;
-  padding:0 20px;
-  background: #345d9f;
-  background: -moz-linear-gradient(top, #345d9f 0%, #4D5CA4 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#345d9f), color-stop(100%,#4D5CA4));
-  background: -webkit-linear-gradient(top, #345d9f 0%,#4D5CA4 100%);
-  background: -o-linear-gradient(top, #345d9f 0%,#4D5CA4 100%);
-  background: -ms-linear-gradient(top, #345d9f 0%,#4D5CA4 100%);
-  background: linear-gradient(to bottom, #345d9f 0%,#4D5CA4 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#345d9f', endColorstr='#4D5CA4',GradientType=0 );
+background:#ccc;
+margin:0 -20px;
+padding:0 20px;
+background: #345d9f;
+background: -moz-linear-gradient(top, #345d9f 0%, #4D5CA4 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#345d9f), color-stop(100%,#4D5CA4));
+background: -webkit-linear-gradient(top, #345d9f 0%,#4D5CA4 100%);
+background: -o-linear-gradient(top, #345d9f 0%,#4D5CA4 100%);
+background: -ms-linear-gradient(top, #345d9f 0%,#4D5CA4 100%);
+background: linear-gradient(to bottom, #345d9f 0%,#4D5CA4 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#345d9f', endColorstr='#4D5CA4',GradientType=0 );
 }
 
 .callout .meta a {
-  color:#fff;
+color:#fff;
 }
 
 .callout .meta a:hover {
-  color:#B7BFD6;
+color:#B7BFD6;
 }
 
 .callout h1 a {
-  color:#fff;
+color:#fff;
 }
 
 .callout h1 a:hover {
-  color:#B7BFD6;
+color:#B7BFD6;
 }
 
 .callout p {
-  color:#DDE3F5;
+color:#DDE3F5;
 }
 
 .comment {
-    position:relative;
-    left:10px;
-    font-family: 'Inconsolata', Courier;
-    font-size: 16px;
-    line-height: 1.5;
+position:relative;
+left:10px;
+     font-family: 'Inconsolata', Courier;
+     font-size: 16px;
+     line-height: 1.5;
 }
 
 .comment p {
   margin-left: 15px;
+}
+
+.readmore a {
+  margin-left: 15px;
+  color:black;
+  font-size: 14px;
 }
