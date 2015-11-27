@@ -1,0 +1,103 @@
+
+#container {
+}
+
+body {
+    font-family: "Monaco", "Inconsolata", Courier, "Helvetica Neue", "Lucida Grande";
+    text-rendering: optimizeLegibility;
+    
+    font-size: 16px;
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+article {
+    display: block;
+    font-size: 16px;
+    margin-bottom:10px;
+    border: 1px solid transparent;
+}
+
+article h1 {
+    display: inline;
+    font-size:25px;
+}
+
+article h2 {
+    display: inline;
+    font-size: 20px;
+}
+
+article h6 {
+    display: inline;
+    font-size: 16px;
+    color: #666;
+}
+
+article h1 a {
+    color: #666;
+}
+
+article h1 a:visited {
+    color: #666;
+}
+/*
+article p {
+    font-size:14px;
+    color:#999;
+    margin-left:20px;
+}
+
+article p a {
+    color: #666;
+}
+*/
+.comment {
+    position:relative;
+    left:10px;
+    font-family: 'Inconsolata', Courier;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+header {
+    display:block;
+    position:relative;
+    padding: 15px 0px 0px 15px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    display: inline;
+    font-size:50px;
+    font-weight:bold;
+    color:#333;
+}
+
+header h1 a {
+    color:#333;
+}
+
+#content {
+    display:block;
+    width: 800px;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+}
+
+topcomment {
+    display:block;
+    margin-bottom:30px;
+}
+
+code {
+    font-family: 'Consolas', 'Courier', Verdana, sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    line-height: 80%;
+}
