@@ -1,0 +1,88 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="utf-8">
+<title>
+JSP - JavaServer Pages - &lt;sonny&gt;
+</title>
+<link rel="stylesheet" type="text/css" href="./syntax.css">
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+
+<header><h1>&lt;sonny&gt;</h1></header>
+<div id="content">
+<section><article><h1><a>JSP - JavaServer Pages</a></h1></article></section>
+
+<topcomment><article class="comment">
+
+
+<h2>Overview</h2>
+
+<h4>JavaServer Pages</h4>
+
+<p>JavaServer Pages is a technology for <strong>developing web pages</strong> that <strong>support dynamic content</strong> which helps developers <strong>insert java code in HTML pages</strong> by making use of special JSP tags, most of which start with &lt;% and end with %&gt;.</p>
+
+<p>A JavaServer Pages component is a type of Java servlet that is designed to fullfill the role of a user interface for a Java web application.</p>
+
+<p>Web developers write JSPs as text files that combine HTML or XHTML code, XML elements, and embeded JSP actions and commands.</p>
+
+<p>Using JSP, you can collect input from users through web page forms, present records from a database or another source, and create web dynamically.</p>
+
+<p>JSP tags can be used for a variety of purposes, such as retrieving information from a database or registering user preferences, accessing JavaBeans components, passing control between pages and sharing information between requests, pages etc.</p>
+
+<h4>Why use JSP?</h4>
+
+<p>JavaServer Pages often serve the same purpose as program implemented by using the Common Gateway Interface (CGI). But JSP offer several advantages in comparison with the CGI.</p>
+
+<ul>
+<li>Performance is significantly better because JSP because JSP allows embedding Dynamic Elements in HTML Pages itself instead of having a separate CGI files.</li>
+<li>JSP are always compiled before it's processed by server unlike CGI/Perl which requires the server to load an interpreter and the target script each time the page is requested.</li>
+<li>JavaServer Pages are build on top of the Java Servlets API, so like Servlets, JSP also has access to all the powerful Enterprise Java APIs, including JDBC, JNDI, EJB, JAXP etc.</li>
+<li>JSP pages can be used in combination with servlets which handle the business logic, the model supported by Java servlet template engines.</li>
+</ul>
+
+<p>Finally, JSP is an integral part of Java EE, a complete platform for enterprise class applications. This means that JSP can play a part in the simplest applications to the most complex and demanding.</p>
+
+<h4>JSP vs.</h4>
+
+<ul>
+<li><strong>vs. Active Server Pages (ASP)</strong>:  there are two advantages. First, the dynamic part is written in Java, not Visual Basic or other MS specific language, so it is more powerful and easier to use. Second, it is portable to other operating systems and non-Microsoft Web servers.</li>
+<li><strong>vs. Pure Servlet:</strong> It is more convenient to write (and to modify) regular HTML than to have plenty of <em>println</em> statements that generate the HTML.</li>
+<li><strong>vs. JavaScript:</strong> JavaScript can generate HTML dynamically on the client but can hardly interact with the web server to perform complex tasks like database access and image processing etc.</li>
+<li><strong>vs. HTML:</strong> Regular HTML, of cause, cannot contain dynamic information.</li>
+</ul>
+
+<h2>Architecture</h2>
+
+<p>The web server needs a <strong>JSP engine</strong> (attention, this mean that, sometimes we need to include <strong>jsp-api.jar</strong> to tomcat CLASSPATH) ie. container to process JSP pages.</p>
+
+<p>The JSP container is responsible for intercepting requests for JSP pages.</p>
+
+<p>Following diagram shows the position of JSP container and JSP files in a web application.</p>
+
+<p><img src="http://www.tutorialspoint.com/jsp/images/jsp-arch.jpg" alt="Typical Web server supporting JSP" /></p>
+
+<h4>JSP Processing</h4>
+
+<ol>
+<li>As with a normal page, your browser sends an HTTP request to the web server.</li>
+<li>The web server recognized that the HTTP request is for a JSP page and forwards it to a JSP engine.</li>
+<li>The JSP engine loads the JSP page from disk and converts it into a servlet content.</li>
+<li>The JSP engine compiles the servlet into an executable class and forwards the original request to a servlet engine.</li>
+<li>A part of the web server called servlet engine loads the servlet class and executes it. During execution, the servlet produces an output in HTML format, which the servlet engine passes to the web server inside an HTTP response.</li>
+<li>The web server forwards the HTTP response to your browser in terms of static HTML content.</li>
+<li>Finally web browser (client) handles the dynamically generated HTML page inside the HTTP response exactly as if it were a static page.</li>
+</ol>
+
+<p><img src="http://www.tutorialspoint.com/jsp/images/jsp-processing.jpg" alt="Diagram JSP processing" /></p>
+
+<p>Typically, the JSP engine checks to see whether a servlet for a JSP file alreadly exists and whether the modification date on the JSP is older than the servlet. If the JSP is older than its generated servlet, the JSP container assumes that the JSP hasn't changed --> the generated servlet still matches the JSP's contents. This makes the process more efficient than other scripting languages (such as PHP) and therefore faster.</p>
+
+<p>So in a way, a JSP page is really just another way to write servlet without having to be a Java programming wiz. Except for the translation phrase, a JSP page is handled exactly like a regular servlet.</p>
+
+<h4>This note from these links:</h4>
+
+<p><a href="http://www.tutorialspoint.com/jsp/jsp_overview.htm">reference JSP Overview</a>
+<a href="http://www.tutorialspoint.com/jsp/jsp_architecture.htm">reference JSP Architecture</a></p>
+
+</article></topcomment></div></body></html>
